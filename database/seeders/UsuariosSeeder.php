@@ -41,7 +41,7 @@ class UsuariosSeeder extends Seeder
         $user->cargo = "Profesional II - UGE";
         $user->user = "erojas";
         $user->password = "dd27564ac5d8b5065d5986d0f9e92fb91e71a23f9f5c13e599985c646c078a16"; //1231230
-        $user->rol = 'Funcionario';
+        $user->rol = 'Usuario';
         $user->estado = 'Habilitado';
         $user->save();
 

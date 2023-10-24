@@ -67,4 +67,10 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Ingreso'); // se dirige hacia Ingreso
     }
+
+    // Se dirige ha agendas
+    public function fotografia()
+    {
+        return $this->hasMany('App\Models\Fotografia'); // se dirige hacia fotografia
+    }
 }

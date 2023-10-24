@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AgendaController;
 use App\Http\Controllers\EventoControlador;
+use App\Http\Controllers\FotografiaController;
 use App\Http\Controllers\IngresoController;
 use App\Http\Controllers\PruebaController;
 use App\Http\Controllers\PuntosController;
@@ -55,6 +56,9 @@ Route::group(['middleware' => ['api.auth']], function () {
     Route::put('/api/visitas/fechasalida/{id}', [IngresoController::class, 'fechaSalida']);
     Route::get('/api/visitas/historial/{id}', [IngresoController::class, 'historial']);
     Route::get('/api/visitas/historialreal/{carnet}', [IngresoController::class, 'historialReal']);
+
+    // /*************RUTAS PROTEGIDAS PARA FOTOGRAFIAS********/ 
+    Route::resource('/api/fotografia', FotografiaController::class);
 });
 Route::resource('/api/test', TestEstudianteController::class);
 Route::resource('/api/prueba', PruebaController::class);
